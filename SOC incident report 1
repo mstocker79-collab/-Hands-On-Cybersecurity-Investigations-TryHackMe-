@@ -1,0 +1,37 @@
+“Hands On Cybersecurity Investigations (TryHackMe)”
+
+ Summary of incident
+At 14:00CDT on September 5th, 2026, we had a High-severity alert saying that there were unauthorized login attempts from the IP address 221.181.185.159. Four minutes later they successfully logged into our system. Threat intelligence checks showed the IP had been involved in multiple prior cyberattacks. The incident was escalated to the SOC Team Lead for further review.
+Alert details
+Alert Name: Unauthorized Login
+Alert Source: Microsoft Sentinel
+Severity: High
+User Account: j.doe
+Host: WIN CORP A12
+Time Window: 14:00–14:04 CDT
+Event Count: 1 failed login, 1 successful login
+Source IP: 221.181.185.159
+Geo Location: China
+User’s Normal Location: Rochester, MN
+Initial triage
+Using the SIEM I was able to determine that this IP address had been used in 4 other cyber-attacks. I also contacted the user via internal messaging. He confirmed that he had not been traveling and did not initiate the login. He also confirmed that he received a MFA push that he didn’t respond to.
+Investigation findings
+•	Login attempts came from a known malicious IP address
+•	Successful login indicates that the credentials had been stolen
+•	No lateral movement or privilege escalation observed
+
+Containment actions
+•	Disabled account
+•	Revoked all active Sessions
+•	Forced password reset
+•	Blocked IP 221.181.185.159 at firewall
+Recovery & remediation
+•	Re-enabled account after password reset
+•	Adjusted SIEM to alert earlier for similar login patterns
+Final assessment
+This was a successful credential compromise with no evidence of lateral movement or privilege escalation. The attacker gained access, but we caught the malicious login attempt to contain the attacker before they could access anything important. This was probably caused by weak passwords and possible MFA fatigue. 
+MITRE ATT&CK Mapping
+•	T1110 — Brute Force
+•	T1078 — Valid Accounts
+•	T1621 — MFA Request Generation
+

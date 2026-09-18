@@ -1,0 +1,120 @@
+
+Adversary Intelligence Analysis: Structured Threat Assessment and Reporting
+
+Introduction
+This project applies the full intelligence lifecycle to analyze adversary behavior, assess threat activity, and produce structured, actionable intelligence reporting. The goal is to demonstrate practical competency in cyber threat intelligence (CTI), including collection, triage, analysis, and dissemination of findings relevant to modern threat actors and their techniques.
+The assessment focuses on identifying adversary motivations, capabilities, and TTPs using open source intelligence, dark web ecosystem research, and technical indicators. Findings are evaluated using established analytic frameworks, including MITRE ATT&CK and structured analytic techniques, to ensure clarity, rigor, and repeatability.
+This report is designed to reflect real world intelligence workflows used by security teams and organizations such as CrowdStrike. It emphasizes analytic reasoning, evidence based conclusions, and communication tailored for both technical and executive audiences. The objective is to transform raw data and observations into meaningful intelligence that supports decision making, strengthens defensive posture, and enhances understanding of adversary operations.
+
+Executive Summary
+	Finger Lakes Community Bank experienced a cyber incident on May 25th. As the financial industry continues its rapid digital transformation, cybersecurity has emerged as a critical priority for banks (Fortifying Banking Cybersecurity: Strategies for a Resilient Future, 2025). The banks leadership had just recently realized that cybersecurity was something they needed to think about. They had plans such as incident response, and disaster recovery plans as well as email policies in place but these plans were not enforced. Due to the lack of enforcement, the hacker was able to breach systems and initiate a fund transfer. The following is a plan that I have created that will help the bank more effectively detect and respond to this type of incident in the future. 
+Overall Plan
+	There are three important things that need to be addressed. They are employee awareness, device protection, and email security.  Employees will receive training on how to identify phishing emails and on their overall cybersecurity role in the company. Enhanced monitoring and endpoint detection will allow the bank to detect malicious activity early and meet regulations for safeguarding customer data. This plan is designed to identify threats sooner and deal with them before they can cause any damage.
+Key takeaways
+	Since a lot of banking has been changing to be more digital, they are more likely to be targeted by hackers. Finger Lakes community bank had a security breach because they didn’t enforce the policies that could have prevented them. It serves as a reminder that robust cybersecurity measures are not merely an option but an absolute necessity in today’s digital landscape (Key Lessons from 5 Cyber Attacks Every Business Should Know – Nucleo Consulting, 2023). 
+	The most important takeaway is that fund transfers should never be approved solely over email. The policy of having handwritten approval needs to be done every time.  Another key takeaway is that monitoring and logging are essential. If you are monitoring suspicious activity you can respond to it immediately upon detection. The final takeaway that I think is very important is that endpoint compromise needs to be treated as being very serious. As soon as malware was found on the clerk’s laptop the bank should assume that sensitive data has probably been compromised.
+Operationalize
+	The first step to operationalization is to create security policies and have the security team train on the policies multiple times. The team needs to have clear rules about when to escalate threats, how to escalate them, and who they should be escalated to. There needs to be clear containment measures that the team will take when finding malware. The bank also needs to implement plans to review and update policies on a regular basis.
+
+Legal, Regulatory, and Policy Compliance
+Approach of detection
+	Banks store and process sensitive financial information such as account numbers and social security numbers. This means that it is subject to very strict regulations. They are expected to maintain strong monitoring, logging and detection abilities. The following standard is critical to keeping credit card information safe.  This standard, established by the Payment Card Industry Security Standards Council (PCI DSS), ensures that any business handling credit card information implements secure processes for processing, storing, and transmitting data (Andrade, 2025). Financial institutions are also expected to follow the cybersecurity requirements under the Gramm-leach-Bliley Act (GLBA). GLBA requires banks to protect customer information with access controls and risk management.
+	Keeping the logs from cyber incidents is a requirement so that investigators can review them after the incident. In the scenario there were repeated connections from XYZ free Hosting IP. These connections should have triggered alerts because they could be thought of as reconnaissance activity. If there had been an alert, then the hackers may never have gained access to the bank’s sensitive information.
+Approach to response
+	Legal and regulatory requirements strongly influence how Finger Lakes Bank must respond. Since there was unauthorized access, financial fraud, and a malware infection, the bank must respond in a way that preserves evidence and makes sure that reporting requirements are met. This means they must keep any evidence that could be needed for legal action. From a regulatory perspective, banks have to respond quickly and document all actions that happen during an incident to demonstrate due diligence.
+	In the scenario the CFO’s email account is compromised. Any transactions that happened through the account during this time period need to be thought of as suspicious and should be thoroughly investigated. There should also be other steps taken such as credential resets and containment actions. Regulations may also require that customers be informed if any of their information was exposed.
+Method of resolving gaps
+	Finger Lakes Bank has several policies in place such as email policies and incident response plans. The gaps they have are in enforcement, monitoring, and execution. The first thing they should do to try and resolve gaps is to look at the policies are procedures they currently have. They should make sure that these policies include things that deal with such things as phishing awareness. By reviewing what they currently say they can bring them up to date. 
+	Once things have been reviewed and updated, they can work on the next step which is to enforce the policies. The policy of needing written approval instead of just email approval being enforced would have stopped a fraudulent funds transfer.  The remote access policy also needs to be enforced to prevent unauthorized access through infected endpoints.
+	Another way to resolve gaps is to have training for all staff members. Cybersecurity needs to involve all employees and not just people in IT. There should be regular email phishing training. The team that oversees fund transfers should also have training to watch out for fraud. The final step for resolving gaps is to keep watching for them and updating policies and procedures to deal with any new gaps that appear. 
+
+
+
+Operational Plan and Analysis
+Detection
+Step: Identify individual steps and list them in logical sequence in the first column below	Role and Responsibility: Identify the role and who performs it below, ensuring it corresponds to the step in the first column in the table	Rationale Behind Assignment: Identify your rationale behind the assignment, ensuring you address implementation concerns related to the step and the role and responsibility in the first two columns in the table
+Monitor systems	SOC analyst – monitors logs and alerts	They are trained to look for suspicious activity.
+Validate and classify the alert	Tier 2 SOC analyst
+Investigate alerts	It is their job to do this and by properly classifying incidents false positives are less likely. 
+Correlate events across systems	Incident response analyst analyze data	They can analyze the data from multiple sources to identify patterns.
+Escalate Confirmed incidents	Incident Managers escalate if needed	The incident manager oversees escalating incidents. By having  one person in charge it helps speed up response times.
+
+Response
+Step: Identify individual steps and list them in logical sequence in the first column below	Role and Responsibility: Identify the role and who performs it below, ensuring it corresponds to the step in the first column in the table	Rationale Behind Assignment: Identify your rationale behind the assignment, ensuring you address implementation concerns related to the step and the role and responsibility in the first two columns in the table
+Contain affected systems	Incident response team isolates systems, blocks traffic, disables accounts	By containing the breach, it prevents further systems from being damaged.
+Preserve evidence	Digital Forensic specialist
+Collect logs and disk images	This is important so they have information on what happened and how it happened for any legal needs.
+Eradicate Threat	System admins
+Remove malware	The system admins have the required access to eliminate threats.
+Restore Systems and services	Operations team	This team can restore systems from backups. This ensures that businesses can start back up as soon as possible.
+ 
+Communication and Reporting
+Step: Identify individual steps and list them in logical sequence in the first column below	Role and Responsibility: Identify the role and who performs it below, ensuring it corresponds to the step in the first column in the table	Rationale Behind Assignment: Identify your rationale behind the assignment, ensuring you address implementation concerns related to the step and the role and responsibility in the first two columns in the table
+Notify Stakeholders	Incident manager
+Informs leadership	It is important for the leadership team to know what is going on.
+Communicate with legal and compliance teams	Legal/compliance Officers-check laws and regulations	These officers make sure the laws are being followed such as breach notification laws.
+Communicate with customers	Public relations team. They communicate with customers	By informing customers you protect your reputation. If they found out from someone else it would look worse.
+Document incident	Incident response Team completes a report	Documentation helps to make sure the incident doesn’t happen again.
+
+Prevention
+Step: Identify individual steps and list them in logical sequence in the first column below	Role and Responsibility: Identify the role and who performs it below, ensuring it corresponds to the step in the first column in the table	Rationale Behind Assignment: Identify your rationale behind the assignment, ensuring you address implementation concerns related to the step and the role and responsibility in the first two columns in the table
+Conduct post-incident review	Incident response team and leadership. They figure out the cause.	This is important to identify weaknesses, so they don’t happen again.
+Update Security Controls	Engineering team. They change access controls.	Keeping things updated can reduce the number of attacks that get through.
+Revise Policies and Procedures	Security Governance team. They update incident response plans	This is important because threats are always changing. This team needs to make sure that the plan can deal with the most recent threats.
+Provide Security Training	Security awareness team. They educate employees.	A ton of incidents happen from people clicking on links in phishing emails. Training people to identify these things reduces the chances of people clicking on malicious links.
+
+
+
+Courses of action Table
+ISE 620 Courses of Action Table Template and Instructions This template is an aid to help you complete the Courses of Action Table elements in Milestone Two of your final project. The courses of action table template is similar to the activity you completed in Module Five. However, unlike the targeting step that you focused on in the Module Five lab, your completed courses of action table must address the full flow of the potential attack in your provided scenario. Use the Final Project Scenario and the module resources to complete this table. Table Template and Instructions Use the table in this document as the basis of the “Courses of Action” table for Part II of your final project. Replace the bracketed text with the relevant information. If you do not want to work within the template, you may create your own table or document in a separate Microsoft Word document, but it must contain all the required elements after the listed steps. The resources and the instructions will guide you through the completion of this template. Your completed table will be scored specific to the guidelines and rubric in Milestone Two. Lastly, it should be noted that in practice, this type of table is referenced as a procedure document that contains an objective, description, and steps to completion. For purposes of this activity, you will keep this information brief and limited to this table. The first step in the Targeting phase has been provided for you as an example of how to right-size the information you are adding to the table. The other phases that should be included in your completed table are Reconnaissance, Weaponization, Delivery, Exploitation, Installation, Command & Control, and Actions on Objectives.
+Step 1: Objective: [Decide who, what, where, and how to conduct the cyberattack. Prior to completing your table, read the scenario. Summarize the attack objective you see in that scenario here as a way to situate yourself prior to completing the table. This requires that you read and fully synthesize the scenario, as the attack objective is not explicitly stated.]
+Step 2: Attack Methods and Features: To succeed, an attacker must complete all of the identified attack steps in the proper sequence before the defender applies countermeasures or some unknown variable changes the operating environment under attack. For this step, you will complete the Attack Phase and Attack Action columns below. Ensure your phase and actions are organized according to their order of execution
+Step 3: Detection Location and Methods After completing Step 2, you will fill in the two columns below, Indicators of Attack and Detection Point, as indicated.
+Step 4: Response Method After completing Step 3, fill in the Defensive Countermeasures column below by identifying and describing the intent of the countermeasure (that is to identify, detect, disrupt, deny, and so forth) for the corresponding attack action. Also, identify important procedural steps necessary to implement the countermeasure.
+Step 5: Response Objective: After completing Step 4, identify the phase of the IR process in which this countermeasure is most likely to be implemented, choosing from the provided list. Fill in the Defensive Phase column below.
+
+Attack Phase Identify the phase of the Kill Chain most closely aligned with the specific attack actions. The phases are Targeting, Reconnaissance, Weaponization, Exploitation, Installation, Command and Control, and Actions on	Attack Actions Fill in the attack actions (the list of specific malicious tasks performed to complete the attack) and number them in the order in which they would be performed. In the two columns below, include the step number and the malicious task.	Indicators of Attack List an anomalous event or effect that can serve as a signal to a defender that the attack is underway.	Detection Point Identify a likely target system or asset for the attack action you have identified in Step 2	Defensive Countermeasures Describe your defensive course of action. (Note: In a professional setting, you may find it valuable to create a library of countermeasures using a standard template and to simply reference the specific procedure document in the box below. Courses of action tables are intended to be living documents that change as attackers evolve their attacks and incident responders mature their defensive capabilities.)	Defensive Phase Identify the phase of the incident response process most closely aligned with each countermeasure. The phases are Preparation, Identification, Containment, Eradication, Recovery, and Lessons Learned.
+Step	Describe Malicious Task
+
+Targeting	1	Identify insecure public-facing target system	• Spikes in network traffic from unusual IP addresses	• Public-facing web server logs • Perimeter firewall logs	• Catalog and suspicious IP addresses for further analysis • Conduct targeted research into IP Address registration and DNS data	Preparation
+Reconnaissance	2	Scan the bank’s public ip range to look for exposed services	Connection attempts from foreign ip address	IDS alerts,
+Firewall logs	Block the suspicious ip addresses and make sure to IDS is looking for this type of activity.	Identification
+Weaponization	3	Create phishing email	External email address with urgent request	Email logs	Set up advanced email filtering	Preparation
+Delivery	4	Send the phishing email to the bank employees from an email address that looks like a trusted contact.	Spoofed sender address or unusual email traffic	Email server logs	Train people to recognize phishing emails. Use email scanning tools to look for phishing keywords or suspicious attachments.	Identification
+Exploitation	5	Employee opens email and clicks link	Endpoint tries to download an unknown executable	Endpoint Security Alerts	Deploy endpoint detection and response tools.	Containment
+Command and control.	6	Infected system connects to the attacker’s server	Outbound connections to suspicious ip addresses.	Firewall logs and network monitoring	Block all malicious IP addresses and isolate any infected devices	Containment
+Installation	7	Install the Zapya Remote access Trojan	Unauthorized software installation	Endpoint logs and antivirus alerts	Quarantine infected systems and remove malware	Eradication
+Actions and objectives	8	Attacker requests fraudulent wire transfer	Email activity seems unusual	Email logs and user behavior monitoring	Require multi-factor authentication and require multiple people to approve large wire transfers	Recovery
+Post-Incident review	9	Review what happened and change the policies and procedures to stop this from happening again.	Gather evidence from all sources such as logs and emails.	Incident response documentation	Update policies and have mandatory phishing awareness training. Improve email filtering and have regular security audits.	Lessons Learned.
+
+ 
+
+
+Countermeasures Analysis
+Systems
+	There are a lot of systems that can be put in place to reduce the negative impact from attacks on organizational systems.  Blocking suspicious IP addresses will slow down hackers by stopping things like brute force attacks from those addresses. Another thing that should be done is to make sure that an Incident response system is checking for and stopping all suspicious types of activity. 
+A lot of attacks come in the form of phishing emails. A system that can stop this kind of thing is advanced email filtering. This will reduce negative impacts by keeping a lot of phishing emails away from people or warning people that the emails look suspicious. The final system to use would be to deploy endpoint detection and response tools. These focus on behaviors that seem suspicious such as malware or ransomware doing things and stops it.
+Operations
+	One of the best operational countermeasures is having multi-factor authentication required for each account. This way even if a hacker has your password, they will still need access to your phone or email address to get a security code before they can login to your account. This added step will slow down hackers hopefully enough for someone to realize it is suspicious such as someone logging in from an unknown location. Regular patching is another operation that should be done so that any known threats can be blocked.
+	Hardening systems by removing unused software is also a good thing to do. Unused software is probably not being patched regularly because it may be forgotten about. This reduces the attack surface as well so that a hacker has less chances of finding a weak spot. Having an offline place to backup important data is also helpful. If the data, you need to run your business gets affected by ransomware it won’t stop your business from working since you have that information in a safe place. You should also have operational policies and procedures in place that are regularly updated. Hackers are constantly learning new methods to try and breach your security and the best way to stop it is to also keep changing how you approach security. When the policies and procedures are evolving at the same time as the attack methods then hackers will be less likely to breach the network.
+Personnel
+	A great personnel countermeasure to use is training employees on how to identify phishing emails. Human error is the reason a lot of cyber security breaches happen. When people know what to watch for, they are less likely to be fooled. Another personnel countermeasure that can reduce the negative impact of attacks is to have a team that is trained to deal with the attacks. Each person should know what they are expected to do and who to report to. By having these people ready it will dramatically reduce the amount of time a hacker has access to a network. 
+	Personnel should also know how to come up with passwords that are both unique and strong. This means that they are long enough and use special characters as well as upper-case and lower-case letters and numbers. When passwords are strong then it would take a computer much longer to guess them. Personnel should also be sure to keep their login credentials safe by not writing them down or sharing them with anyone or entering them on untrusted websites. 
+	
+
+
+
+
+
+
+References
+
+Fortifying banking cybersecurity: Strategies for a resilient future. (2025). KPMG. https://kpmg.com/us/en/articles/2025/fortifying-banking-cybersecurity.html
+‌
+Key Lessons from 5 Cyber Attacks Every Business Should Know – Nucleo Consulting. (2023, December 27). Nucleoconsulting.com. https://nucleoconsulting.com/key-lessons-from-5-cyber-attacks-every-business-should-know/
+
+‌Andrade, G. (2025, October 24). Top Cybersecurity Regulations for Banks and How to Remain Compliant. Applied Tech. https://www.appliedtech.us/resource-hub/cybersecurity-regulations-for-banks/
+‌
+
+
+
